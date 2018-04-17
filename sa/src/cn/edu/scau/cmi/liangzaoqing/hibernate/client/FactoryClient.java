@@ -6,7 +6,7 @@ import org.hibernate.Transaction;
 import cn.edu.scau.cmi.liangzaoqing.hibernate.domain.Sa;
 import cn.edu.scau.cmi.liangzaoqing.hibernate.util.HibernateSessionFactory;
 
-public class Client {
+public class FactoryClient {
 
 	public static void main(String[] args) {
 //		创建一个sa对象
