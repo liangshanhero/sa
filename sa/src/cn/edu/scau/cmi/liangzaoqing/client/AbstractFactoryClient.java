@@ -1,4 +1,4 @@
-package cn.edu.scau.cmi.liangzaoqing.hibernate.client;
+package cn.edu.scau.cmi.liangzaoqing.client;
 
 import cn.edu.scau.cmi.liangzaoqing.abstractFactory.abstractDomain.Pad;
 import cn.edu.scau.cmi.liangzaoqing.abstractFactory.factory.AbstractFactory;

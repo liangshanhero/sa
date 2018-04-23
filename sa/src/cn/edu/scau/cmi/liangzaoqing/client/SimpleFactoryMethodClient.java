@@ -1,4 +1,4 @@
-package cn.edu.scau.cmi.liangzaoqing.hibernate.client;
+package cn.edu.scau.cmi.liangzaoqing.client;
 
 public class SimpleFactoryMethodClient {
 

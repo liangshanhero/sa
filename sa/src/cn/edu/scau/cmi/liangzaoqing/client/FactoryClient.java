@@ -1,4 +1,4 @@
-package cn.edu.scau.cmi.liangzaoqing.hibernate.client;
+package cn.edu.scau.cmi.liangzaoqing.client;
 
 import org.hibernate.Session;
 import org.hibernate.Transaction;
