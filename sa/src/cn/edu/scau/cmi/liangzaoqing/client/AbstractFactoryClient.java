@@ -1,6 +1,6 @@
 package cn.edu.scau.cmi.liangzaoqing.client;
 
-import cn.edu.scau.cmi.liangzaoqing.abstractFactory.abstractDomain.Pad;
+import cn.edu.scau.cmi.liangzaoqing.abstractFactory.domainAbstractClass.Pad;
 import cn.edu.scau.cmi.liangzaoqing.abstractFactory.factory.AbstractFactory;
 
 public class AbstractFactoryClient {

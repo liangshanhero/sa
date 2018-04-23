@@ -1,11 +1,11 @@
 package cn.edu.scau.cmi.liangzaoqing.abstractFactory.factory;
 
-import cn.edu.scau.cmi.liangzaoqing.abstractFactory.abstractDomain.Pad;
-import cn.edu.scau.cmi.liangzaoqing.abstractFactory.abstractDomain.Phone;
-import cn.edu.scau.cmi.liangzaoqing.abstractFactory.abstractDomain.Watch;
 import cn.edu.scau.cmi.liangzaoqing.abstractFactory.domain.HuaweiPad;
 import cn.edu.scau.cmi.liangzaoqing.abstractFactory.domain.HuaweiPhone;
 import cn.edu.scau.cmi.liangzaoqing.abstractFactory.domain.HuaweiWatch;
+import cn.edu.scau.cmi.liangzaoqing.abstractFactory.domainAbstractClass.Pad;
+import cn.edu.scau.cmi.liangzaoqing.abstractFactory.domainAbstractClass.Phone;
+import cn.edu.scau.cmi.liangzaoqing.abstractFactory.domainAbstractClass.Watch;
 
 public class HuaweiFactory extends AbstractFactory {
 

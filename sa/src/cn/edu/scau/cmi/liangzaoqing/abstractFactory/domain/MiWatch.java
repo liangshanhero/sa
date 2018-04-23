@@ -1,7 +1,7 @@
 package cn.edu.scau.cmi.liangzaoqing.abstractFactory.domain;
 
-import cn.edu.scau.cmi.liangzaoqing.abstractFactory.abstractDomain.Watch;
 import cn.edu.scau.cmi.liangzaoqing.abstractFactory.damainInterface.Mi;
+import cn.edu.scau.cmi.liangzaoqing.abstractFactory.domainAbstractClass.Watch;
 
 public class MiWatch extends Watch implements Mi {
 

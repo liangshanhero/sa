@@ -1,7 +1,7 @@
 package cn.edu.scau.cmi.liangzaoqing.abstractFactory.domain;
 
-import cn.edu.scau.cmi.liangzaoqing.abstractFactory.abstractDomain.Phone;
 import cn.edu.scau.cmi.liangzaoqing.abstractFactory.damainInterface.Mi;
+import cn.edu.scau.cmi.liangzaoqing.abstractFactory.domainAbstractClass.Phone;
 
 public class MiPhone extends Phone implements Mi {
 
