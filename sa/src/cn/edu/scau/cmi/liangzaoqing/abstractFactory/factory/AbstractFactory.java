@@ -1,8 +1,8 @@
 package cn.edu.scau.cmi.liangzaoqing.abstractFactory.factory;
 
-import cn.edu.scau.cmi.liangzaoqing.abstractFactory.entityFather.Pad;
-import cn.edu.scau.cmi.liangzaoqing.abstractFactory.entityFather.Phone;
-import cn.edu.scau.cmi.liangzaoqing.abstractFactory.entityFather.Watch;
+import cn.edu.scau.cmi.liangzaoqing.abstractFactory.abstractDomain.Pad;
+import cn.edu.scau.cmi.liangzaoqing.abstractFactory.abstractDomain.Phone;
+import cn.edu.scau.cmi.liangzaoqing.abstractFactory.abstractDomain.Watch;
 
 public abstract class AbstractFactory {
 	public static AbstractFactory getFactory(String brand) {

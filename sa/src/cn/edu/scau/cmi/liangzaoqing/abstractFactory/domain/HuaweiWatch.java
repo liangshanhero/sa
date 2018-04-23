@@ -1,7 +1,7 @@
 package cn.edu.scau.cmi.liangzaoqing.abstractFactory.domain;
 
+import cn.edu.scau.cmi.liangzaoqing.abstractFactory.abstractDomain.Watch;
 import cn.edu.scau.cmi.liangzaoqing.abstractFactory.brand.Huawei;
-import cn.edu.scau.cmi.liangzaoqing.abstractFactory.entityFather.Watch;
 
 public class HuaweiWatch extends Watch implements Huawei {
 

@@ -1,11 +1,11 @@
 package cn.edu.scau.cmi.liangzaoqing.abstractFactory.factory;
 
+import cn.edu.scau.cmi.liangzaoqing.abstractFactory.abstractDomain.Pad;
+import cn.edu.scau.cmi.liangzaoqing.abstractFactory.abstractDomain.Phone;
+import cn.edu.scau.cmi.liangzaoqing.abstractFactory.abstractDomain.Watch;
 import cn.edu.scau.cmi.liangzaoqing.abstractFactory.domain.ApplePad;
 import cn.edu.scau.cmi.liangzaoqing.abstractFactory.domain.ApplePhone;
 import cn.edu.scau.cmi.liangzaoqing.abstractFactory.domain.AppleWatch;
-import cn.edu.scau.cmi.liangzaoqing.abstractFactory.entityFather.Pad;
-import cn.edu.scau.cmi.liangzaoqing.abstractFactory.entityFather.Phone;
-import cn.edu.scau.cmi.liangzaoqing.abstractFactory.entityFather.Watch;
 
 public class AppleFactory extends AbstractFactory {
 
