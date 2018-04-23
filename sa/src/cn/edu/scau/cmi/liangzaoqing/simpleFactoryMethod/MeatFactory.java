@@ -1,4 +1,4 @@
-package cn.edu.scau.cmi.liangzaoqing.simpleFactory;
+package cn.edu.scau.cmi.liangzaoqing.simpleFactoryMethod;
 
 import cn.edu.scau.cmi.liangzaoqing.domain.Meat;
 
