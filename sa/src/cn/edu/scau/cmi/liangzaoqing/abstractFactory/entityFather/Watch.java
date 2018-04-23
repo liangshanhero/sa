@@ -1,5 +1,5 @@
 package cn.edu.scau.cmi.liangzaoqing.abstractFactory.entityFather;
 
-public abstract class Watch {
+public abstract class Watch extends ConsumerElectronicsDevice{
 
 }
