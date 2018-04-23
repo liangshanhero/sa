@@ -5,4 +5,9 @@ import cn.edu.scau.cmi.liangzaoqing.abstractFactory.entityFather.Pad;
 
 public class HuaweiPad extends Pad implements Huawei {
 
+	@Override
+	public void play() {
+		System.out.println("你好，我是华为平板");		
+	}
+
 }

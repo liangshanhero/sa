@@ -1,27 +1,28 @@
 package cn.edu.scau.cmi.liangzaoqing.abstractFactory.factory;
 
-import cn.edu.scau.cmi.liangzaoqing.abstractFactory.entity.MiPad;
-import cn.edu.scau.cmi.liangzaoqing.abstractFactory.entity.MiPhone;
-import cn.edu.scau.cmi.liangzaoqing.abstractFactory.entity.MiWatch;
+import cn.edu.scau.cmi.liangzaoqing.abstractFactory.entity.ApplePad;
+import cn.edu.scau.cmi.liangzaoqing.abstractFactory.entity.ApplePhone;
+import cn.edu.scau.cmi.liangzaoqing.abstractFactory.entity.AppleWatch;
 import cn.edu.scau.cmi.liangzaoqing.abstractFactory.entityFather.Pad;
 import cn.edu.scau.cmi.liangzaoqing.abstractFactory.entityFather.Phone;
 import cn.edu.scau.cmi.liangzaoqing.abstractFactory.entityFather.Watch;
 
-public class MiFactory extends AbstractFactory {
+public class AppleFactory extends AbstractFactory {
 
 	@Override
 	public Phone createPhone() {
-		return new MiPhone();
+		return new ApplePhone();
 	}
 
 	@Override
 	public Pad createPad() {
-		return new MiPad();
+		return new ApplePad();
 	}
 
 	@Override
 	public Watch createWatch() {
-		return new MiWatch();
+		return new AppleWatch();
 	}
 
+	
 }
