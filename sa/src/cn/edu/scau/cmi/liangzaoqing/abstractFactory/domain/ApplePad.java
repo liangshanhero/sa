@@ -1,7 +1,7 @@
 package cn.edu.scau.cmi.liangzaoqing.abstractFactory.domain;
 
 import cn.edu.scau.cmi.liangzaoqing.abstractFactory.abstractDomain.Pad;
-import cn.edu.scau.cmi.liangzaoqing.abstractFactory.brand.Apple;
+import cn.edu.scau.cmi.liangzaoqing.abstractFactory.damainInterface.Apple;
 
 public class ApplePad extends Pad implements Apple {
 

@@ -1,7 +1,7 @@
 package cn.edu.scau.cmi.liangzaoqing.abstractFactory.domain;
 
 import cn.edu.scau.cmi.liangzaoqing.abstractFactory.abstractDomain.Phone;
-import cn.edu.scau.cmi.liangzaoqing.abstractFactory.brand.Apple;
+import cn.edu.scau.cmi.liangzaoqing.abstractFactory.damainInterface.Apple;
 
 public class ApplePhone extends Phone implements Apple {
 
