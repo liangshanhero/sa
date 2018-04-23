@@ -1,4 +1,4 @@
-package cn.edu.scau.cmi.liangzaoqing.abstractFactory.entity;
+package cn.edu.scau.cmi.liangzaoqing.abstractFactory.domain;
 
 import cn.edu.scau.cmi.liangzaoqing.abstractFactory.brand.Apple;
 import cn.edu.scau.cmi.liangzaoqing.abstractFactory.entityFather.Watch;
@@ -7,7 +7,7 @@ public class AppleWatch extends Watch implements Apple {
 
 	@Override
 	public void play() {
-		System.out.println("ÄãºÃ£¬ÎÒÊÇÆ»¹ûÊÖ±í");		
+		System.out.println("ï¿½ï¿½Ã£ï¿½ï¿½ï¿½ï¿½ï¿½Æ»ï¿½ï¿½ï¿½Ö±ï¿½");		
 	}
 
 }

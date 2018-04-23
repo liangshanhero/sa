@@ -1,8 +1,8 @@
 package cn.edu.scau.cmi.liangzaoqing.abstractFactory.factory;
 
-import cn.edu.scau.cmi.liangzaoqing.abstractFactory.entity.HuaweiPad;
-import cn.edu.scau.cmi.liangzaoqing.abstractFactory.entity.HuaweiPhone;
-import cn.edu.scau.cmi.liangzaoqing.abstractFactory.entity.HuaweiWatch;
+import cn.edu.scau.cmi.liangzaoqing.abstractFactory.domain.HuaweiPad;
+import cn.edu.scau.cmi.liangzaoqing.abstractFactory.domain.HuaweiPhone;
+import cn.edu.scau.cmi.liangzaoqing.abstractFactory.domain.HuaweiWatch;
 import cn.edu.scau.cmi.liangzaoqing.abstractFactory.entityFather.Pad;
 import cn.edu.scau.cmi.liangzaoqing.abstractFactory.entityFather.Phone;
 import cn.edu.scau.cmi.liangzaoqing.abstractFactory.entityFather.Watch;

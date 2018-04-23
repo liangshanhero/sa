@@ -1,4 +1,4 @@
-package cn.edu.scau.cmi.liangzaoqing.abstractFactory.entity;
+package cn.edu.scau.cmi.liangzaoqing.abstractFactory.domain;
 
 import cn.edu.scau.cmi.liangzaoqing.abstractFactory.brand.Mi;
 import cn.edu.scau.cmi.liangzaoqing.abstractFactory.entityFather.Pad;
@@ -7,7 +7,7 @@ public class MiPad extends Pad implements Mi {
 
 	@Override
 	public void play() {
-		System.out.println("ÄãºÃ£¬ÎÒÊÇÐ¡Ã×Æ½°å");		
+		System.out.println("ï¿½ï¿½Ã£ï¿½ï¿½ï¿½ï¿½ï¿½Ð¡ï¿½ï¿½Æ½ï¿½ï¿½");		
 	}
 
 }

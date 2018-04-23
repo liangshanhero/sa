@@ -1,4 +1,4 @@
-package cn.edu.scau.cmi.liangzaoqing.abstractFactory.entity;
+package cn.edu.scau.cmi.liangzaoqing.abstractFactory.domain;
 
 import cn.edu.scau.cmi.liangzaoqing.abstractFactory.brand.Huawei;
 import cn.edu.scau.cmi.liangzaoqing.abstractFactory.entityFather.Pad;
@@ -7,7 +7,7 @@ public class HuaweiPad extends Pad implements Huawei {
 
 	@Override
 	public void play() {
-		System.out.println("ÄãºÃ£¬ÎÒÊÇ»ªÎªÆ½°å");		
+		System.out.println("ï¿½ï¿½Ã£ï¿½ï¿½ï¿½ï¿½Ç»ï¿½ÎªÆ½ï¿½ï¿½");		
 	}
 
 }

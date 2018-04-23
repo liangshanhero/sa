@@ -1,4 +1,4 @@
-package cn.edu.scau.cmi.liangzaoqing.abstractFactory.entity;
+package cn.edu.scau.cmi.liangzaoqing.abstractFactory.domain;
 
 import cn.edu.scau.cmi.liangzaoqing.abstractFactory.brand.Huawei;
 import cn.edu.scau.cmi.liangzaoqing.abstractFactory.entityFather.Watch;
@@ -7,7 +7,7 @@ public class HuaweiWatch extends Watch implements Huawei {
 
 	@Override
 	public void play() {
-		System.out.println("ÄãºÃ£¬ÎÒÊÇ»ªÎªÊÖ±í");		
+		System.out.println("ï¿½ï¿½Ã£ï¿½ï¿½ï¿½ï¿½Ç»ï¿½Îªï¿½Ö±ï¿½");		
 	}
 
 }

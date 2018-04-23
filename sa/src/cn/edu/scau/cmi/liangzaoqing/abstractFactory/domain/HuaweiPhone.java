@@ -1,4 +1,4 @@
-package cn.edu.scau.cmi.liangzaoqing.abstractFactory.entity;
+package cn.edu.scau.cmi.liangzaoqing.abstractFactory.domain;
 
 import cn.edu.scau.cmi.liangzaoqing.abstractFactory.brand.Huawei;
 import cn.edu.scau.cmi.liangzaoqing.abstractFactory.entityFather.Phone;
@@ -7,7 +7,7 @@ public class HuaweiPhone extends Phone implements Huawei {
 
 	@Override
 	public void play() {
-		System.out.println("ÄãºÃ£¬ÎÒÊÇÆ»¹ûÊÖ»ú");
+		System.out.println("ï¿½ï¿½Ã£ï¿½ï¿½ï¿½ï¿½ï¿½Æ»ï¿½ï¿½ï¿½Ö»ï¿½");
 		
 	}
 
