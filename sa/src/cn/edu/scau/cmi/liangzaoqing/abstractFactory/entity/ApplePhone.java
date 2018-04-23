@@ -1,8 +1,8 @@
 package cn.edu.scau.cmi.liangzaoqing.abstractFactory.entity;
 
-import cn.edu.scau.cmi.liangzaoqing.abstractFactory.entityFather.Pad;
-import cn.edu.scau.cmi.liangzaoqing.abstractFactory.entityInterface.Mi;
+import cn.edu.scau.cmi.liangzaoqing.abstractFactory.brand.Apple;
+import cn.edu.scau.cmi.liangzaoqing.abstractFactory.entityFather.Phone;
 
-public class ApplePhone extends Pad implements Mi {
+public class ApplePhone extends Phone implements Apple {
 
 }
