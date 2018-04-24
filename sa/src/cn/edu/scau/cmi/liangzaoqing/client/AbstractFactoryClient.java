@@ -8,7 +8,7 @@ public class AbstractFactoryClient {
 	public static void main(String[] args) {
 		// 获取工厂
 		
-		AbstractFactory brandProducer = AbstractFactory.getFactory("mi");
+		AbstractFactory brandProducer = AbstractFactory.getFactory("apple");
 
 		// (2)获取对象
 		Pad product = brandProducer.createPad();

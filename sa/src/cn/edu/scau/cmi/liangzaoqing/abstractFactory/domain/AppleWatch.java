@@ -7,7 +7,7 @@ public class AppleWatch extends Watch implements Apple {
 
 	@Override
 	public void play() {
-		System.out.println("��ã�����ƻ���ֱ�");		
+		System.out.println("这是苹果手表");		
 	}
 
 }

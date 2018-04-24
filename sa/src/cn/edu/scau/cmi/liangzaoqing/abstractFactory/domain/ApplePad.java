@@ -7,7 +7,7 @@ public class ApplePad extends Pad implements Apple {
 
 	@Override
 	public void play() {
-		System.out.println("��ã�����ƻ���ֻ�");
+		System.out.println("你好，这是苹果平板");
 //		�������÷������......
 		System.out.println(super.name+Apple.brand);
 		

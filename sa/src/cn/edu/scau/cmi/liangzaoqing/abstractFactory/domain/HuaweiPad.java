@@ -7,7 +7,7 @@ public class HuaweiPad extends Pad implements Huawei {
 
 	@Override
 	public void play() {
-		System.out.println("��ã����ǻ�Ϊƽ��");		
+		System.out.println("这是华为平板");		
 	}
 
 }
