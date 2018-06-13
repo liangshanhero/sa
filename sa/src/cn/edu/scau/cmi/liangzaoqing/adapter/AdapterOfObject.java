@@ -1,9 +1,12 @@
 package cn.edu.scau.cmi.liangzaoqing.adapter;
 
-public class AdapterOfObject {
+public class AdapterOfObject implements Target{
 
-	public AdapterOfObject() {
-		// TODO Auto-generated constructor stub
+	@Override
+	public String doTarget() {
+		Adaptee adaptee=new Adaptee();
+		String result= adaptee.op();
+		return result+" by adapterOfObject";
 	}
 
 }
