@@ -13,5 +13,6 @@
 			<attribute name="owner.project.facets" value="me.spring"/>
 		</attributes>
 	</classpathentry>
+	<classpathentry kind="lib" path="D:/Workspace/Jee/test/WebRoot/WEB-INF/lib/hibernate-core-3.5.5.Final.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
