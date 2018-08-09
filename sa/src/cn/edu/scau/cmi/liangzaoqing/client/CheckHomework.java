@@ -6,7 +6,7 @@ import java.io.PrintWriter;
 
 public class CheckHomework {
 	public static void main(String[] args) throws IOException {
-		String path = "E:\\360云同步盘\\2：教学相关\\3 学生提交的作业\\2017学年第（2）学期《软件体系结构》学生提交的实验报告";
+		String path = "F:\\360安全云盘同步版\\4：食品何博士\\食用农产品追溯文档";
 		File score=new File("score.txt");
 		PrintWriter output=new PrintWriter(score);
 		getFileList(new File(path),output);
