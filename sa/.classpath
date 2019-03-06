@@ -7,7 +7,6 @@
 			<attribute name="org.eclipse.jst.component.dependency" value="../lib"/>
 		</attributes>
 	</classpathentry>
-	<classpathentry kind="lib" path="/ema/WebRoot/WEB-INF/lib/spring-context-4.1.0.RELEASE.jar"/>
 	<classpathentry kind="lib" path="lib/org.springframework.aop-3.0.5.RELEASE.jar"/>
 	<classpathentry kind="lib" path="lib/org.springframework.aspects-3.0.5.RELEASE.jar"/>
 	<classpathentry kind="lib" path="lib/org.springframework.beans-3.0.5.RELEASE.jar"/>
