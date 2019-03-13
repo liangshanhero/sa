@@ -1,7 +1,6 @@
-package cn.edu.scau.cmi.liangzaoqing.client;
+ package cn.edu.scau.cmi.liangzaoqing.client;
 
-import org.springframework.context.ApplicationContext;
-import org.springframework.context.support.ClassPathXmlApplicationContext;
+
 
 import cn.edu.scau.cmi.liangzaoqing.spring.domain.Student;
 

@@ -10,6 +10,7 @@ public class Chairman {
 	}
 
 	public static Chairman getInstance(String name) {
+//		Chairman chairman = null;
 		if (chairman == null) {
 			chairman=new Chairman(name);
 			return chairman;
