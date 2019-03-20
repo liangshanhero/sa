@@ -10,7 +10,6 @@ import cn.edu.scau.cmi.liangzaoqing.spring.domain.Student;
 public class SpringClient {
 
 	public SpringClient() {
-		// TODO Auto-generated constructor stub
 	}
 
 	public static void main(String[] args) {
