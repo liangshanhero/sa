@@ -9,9 +9,5 @@ public class ApplePhone extends Phone implements Apple {
 	public void play() {
 		System.out.println("我是苹果手机");
 //		利用代码获取品种和品牌，然后输出
-		
-		
-		
 	}
-
 }

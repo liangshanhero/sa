@@ -1,7 +1,6 @@
 package cn.edu.scau.cmi.liangzaoqing.abstractFactory.damainInterface;
 
-public interface Electronics {
+public interface Brand {
 	String brand="";
-	void play();
 
 }
