@@ -7,7 +7,7 @@ public class HuaweiPhone extends Phone implements Huawei {
 
 	@Override
 	public void play() {
-		System.out.println("��ã�����ƻ���ֻ�");
+		System.out.println("我是华为手机");
 		
 	}
 
