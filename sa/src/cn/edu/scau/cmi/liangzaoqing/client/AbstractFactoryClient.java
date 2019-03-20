@@ -2,7 +2,8 @@ package cn.edu.scau.cmi.liangzaoqing.client;
 
 import java.util.Scanner;
 
-import cn.edu.scau.cmi.liangzaoqing.abstractFactory.damainInterface.Electronics;
+import cn.edu.scau.cmi.liangzaoqing.abstractFactory.damainInterface.Brand;
+import cn.edu.scau.cmi.liangzaoqing.abstractFactory.domainAbstractClass.ConsumerElectronicsDevice;
 import cn.edu.scau.cmi.liangzaoqing.abstractFactory.factory.AbstractFactory;
 import cn.edu.scau.cmi.liangzaoqing.abstractFactory.factory.AppleFactory;
 import cn.edu.scau.cmi.liangzaoqing.abstractFactory.factory.HuaweiFactory;
@@ -30,7 +31,7 @@ public class AbstractFactoryClient {
 		System.out.println("Please select which product you want to buy: cellphone, pad or watch???");
 //		Scanner scanner = new Scanner(System.in);  
 		String productType = scanner.next();  
-		Electronics electronics=null;
+		ConsumerElectronicsDevice electronics=null;
 		switch(productType) {
 		case "cellphone": electronics=factory.createPhone();break;
 		case "pad": electronics=factory.createPad();break;

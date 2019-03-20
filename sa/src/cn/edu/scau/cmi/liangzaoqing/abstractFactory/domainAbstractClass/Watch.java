@@ -1,6 +1,6 @@
 package cn.edu.scau.cmi.liangzaoqing.abstractFactory.domainAbstractClass;
 
 public abstract class Watch extends ConsumerElectronicsDevice{
-	public final String name="�ֱ�";
+	public final String name="手表";
 
 }
