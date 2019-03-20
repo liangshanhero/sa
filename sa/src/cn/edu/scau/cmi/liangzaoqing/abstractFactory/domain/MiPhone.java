@@ -7,7 +7,7 @@ public class MiPhone extends Phone implements Mi {
 
 	@Override
 	public void play() {
-		System.out.println("��ã�����С���ֻ�");		
+		System.out.println("我是小米手机");		
 	}
 
 }

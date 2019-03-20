@@ -1,5 +1,6 @@
 package cn.edu.scau.cmi.liangzaoqing.abstractFactory.factory;
 
+import cn.edu.scau.cmi.liangzaoqing.abstractFactory.damainInterface.Electronics;
 import cn.edu.scau.cmi.liangzaoqing.abstractFactory.domainAbstractClass.Pad;
 import cn.edu.scau.cmi.liangzaoqing.abstractFactory.domainAbstractClass.Phone;
 import cn.edu.scau.cmi.liangzaoqing.abstractFactory.domainAbstractClass.Watch;
@@ -18,8 +19,8 @@ public abstract class AbstractFactory {
 
 	}
 	
-	public abstract Phone createPhone();
-	public abstract Pad createPad();
-	public abstract Watch createWatch();
+	public abstract Electronics createPhone();
+	public abstract Electronics createPad();
+	public abstract Electronics createWatch();
 
 }

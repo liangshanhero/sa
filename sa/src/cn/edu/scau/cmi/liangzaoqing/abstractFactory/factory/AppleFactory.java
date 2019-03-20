@@ -1,5 +1,6 @@
 package cn.edu.scau.cmi.liangzaoqing.abstractFactory.factory;
 
+import cn.edu.scau.cmi.liangzaoqing.abstractFactory.damainInterface.Electronics;
 import cn.edu.scau.cmi.liangzaoqing.abstractFactory.domain.ApplePad;
 import cn.edu.scau.cmi.liangzaoqing.abstractFactory.domain.ApplePhone;
 import cn.edu.scau.cmi.liangzaoqing.abstractFactory.domain.AppleWatch;
@@ -10,17 +11,17 @@ import cn.edu.scau.cmi.liangzaoqing.abstractFactory.domainAbstractClass.Watch;
 public class AppleFactory extends AbstractFactory {
 
 	@Override
-	public Phone createPhone() {
+	public Electronics createPhone() {
 		return new ApplePhone();
 	}
 
 	@Override
-	public Pad createPad() {
+	public Electronics createPad() {
 		return new ApplePad();
 	}
 
 	@Override
-	public Watch createWatch() {
+	public Electronics createWatch() {
 		return new AppleWatch();
 	}
 
