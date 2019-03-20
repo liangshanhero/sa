@@ -2,6 +2,9 @@
 
 
 
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.support.ClassPathXmlApplicationContext;
+
 import cn.edu.scau.cmi.liangzaoqing.spring.domain.Student;
 
 public class SpringClient {
