@@ -16,7 +16,7 @@ public class HibernateSessionFactoryClient {
 		}
 		else
 		{
-			System.out.println("这2个工厂是一样的");
+			System.out.println("这2个工厂不是一样的");
 		}
 		
 
