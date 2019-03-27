@@ -2,7 +2,6 @@ package cn.edu.scau.cmi.liangzaoqing.client;
 
 import java.util.Scanner;
 
-import cn.edu.scau.cmi.liangzaoqing.abstractFactory.damainInterface.Brand;
 import cn.edu.scau.cmi.liangzaoqing.abstractFactory.domainAbstractClass.ConsumerElectronicsDevice;
 import cn.edu.scau.cmi.liangzaoqing.abstractFactory.factory.AbstractFactory;
 import cn.edu.scau.cmi.liangzaoqing.abstractFactory.factory.AppleFactory;
