@@ -1,6 +1,8 @@
 package cn.edu.scau.cmi.liangzaoqing.abstractFactory.domainAbstractClass;
 
-public abstract class ConsumerElectronicsDevice {
+import cn.edu.scau.cmi.liangzaoqing.abstractFactory.damainInterface.Brand;
+
+public abstract class ConsumerElectronicsDevice implements Brand{
 	public abstract void play();
 
 }
