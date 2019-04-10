@@ -2,7 +2,7 @@ package cn.edu.scau.cmi.liangzaoqing.composite.safe;
 
 import java.io.File;
 
-public class Composite  implements Component{
+public class SafeComposite  implements SafeComponent{
 
 	@Override
 	public String doSomething() {

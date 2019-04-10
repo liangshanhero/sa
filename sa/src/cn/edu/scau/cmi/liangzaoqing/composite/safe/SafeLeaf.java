@@ -1,6 +1,6 @@
 package cn.edu.scau.cmi.liangzaoqing.composite.safe;
 
-public class Leaf implements Component{
+public class SafeLeaf implements SafeComponent{
 
 	@Override
 	public String doSomething() {
