@@ -1,33 +1,32 @@
-package cn.edu.scau.cmi.liangzaoqing.hibernate.dao;
+package cn.edu.scau.cmi.liangzaoqing.hibernate.domain;
 
 import java.util.List;
 import java.util.Set;
-import org.hibernate.LockOptions;
+import org.hibernate.LockMode;
 import org.hibernate.Query;
 import org.hibernate.criterion.Example;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import cn.edu.scau.cmi.liangzaoqing.hibernate.domain.Group;
-
 /**
- * A data access object (DAO) providing persistence and search support for Group
+ * A data access object (DAO) providing persistence and search support for Book
  * entities. Transaction control of the save(), update() and delete() operations
  * can directly support Spring container-managed transactions or they can be
  * augmented to handle user-managed Spring transactions. Each of these methods
  * provides additional information for how to configure it for the desired type
  * of transaction control.
  * 
- * @see cn.edu.scau.cmi.liangzaoqing.hibernate.domain.Group
+ * @see cn.edu.scau.cmi.liangzaoqing.hibernate.domain.Book
  * @author MyEclipse Persistence Tools
  */
-public class GroupDAO extends BaseHibernateDAO {
-	private static final Logger log = LoggerFactory.getLogger(GroupDAO.class);
+
+public class BookDAO extends BaseHibernateDAO {
+	private static final Logger log = LoggerFactory.getLogger(BookDAO.class);
 	// property constants
 	public static final String NAME = "name";
 
-	public void save(Group transientInstance) {
-		log.debug("saving Group instance");
+	public void save(Book transientInstance) {
+		log.debug("saving Book instance");
 		try {
 			getSession().save(transientInstance);
 			log.debug("save successful");
@@ -37,8 +36,8 @@ public class GroupDAO extends BaseHibernateDAO {
 		}
 	}
 
-	public void delete(Group persistentInstance) {
-		log.debug("deleting Group instance");
+	public void delete(Book persistentInstance) {
+		log.debug("deleting Book instance");
 		try {
 			getSession().delete(persistentInstance);
 			log.debug("delete successful");
@@ -48,10 +47,11 @@ public class GroupDAO extends BaseHibernateDAO {
 		}
 	}
 
-	public Group findById(java.lang.Long id) {
-		log.debug("getting Group instance with id: " + id);
+	public Book findById(java.lang.Long id) {
+		log.debug("getting Book instance with id: " + id);
 		try {
-			Group instance = (Group) getSession().get("cn.edu.scau.cmi.liangzaoqing.hibernate.Group", id);
+			Book instance = (Book) getSession().get(
+					"cn.edu.scau.cmi.liangzaoqing.hibernate.domain.Book", id);
 			return instance;
 		} catch (RuntimeException re) {
 			log.error("get failed", re);
@@ -59,12 +59,14 @@ public class GroupDAO extends BaseHibernateDAO {
 		}
 	}
 
-	public List findByExample(Group instance) {
-		log.debug("finding Group instance by example");
+	public List findByExample(Book instance) {
+		log.debug("finding Book instance by example");
 		try {
-			List results = getSession().createCriteria("cn.edu.scau.cmi.liangzaoqing.hibernate.Group")
+			List results = getSession()
+					.createCriteria("cn.edu.scau.cmi.liangzaoqing.hibernate.domain.Book")
 					.add(Example.create(instance)).list();
-			log.debug("find by example successful, result size: " + results.size());
+			log.debug("find by example successful, result size: "
+					+ results.size());
 			return results;
 		} catch (RuntimeException re) {
 			log.error("find by example failed", re);
@@ -73,9 +75,11 @@ public class GroupDAO extends BaseHibernateDAO {
 	}
 
 	public List findByProperty(String propertyName, Object value) {
-		log.debug("finding Group instance with property: " + propertyName + ", value: " + value);
+		log.debug("finding Book instance with property: " + propertyName
+				+ ", value: " + value);
 		try {
-			String queryString = "from Group as model where model." + propertyName + "= ?";
+			String queryString = "from Book as model where model."
+					+ propertyName + "= ?";
 			Query queryObject = getSession().createQuery(queryString);
 			queryObject.setParameter(0, value);
 			return queryObject.list();
@@ -90,9 +94,9 @@ public class GroupDAO extends BaseHibernateDAO {
 	}
 
 	public List findAll() {
-		log.debug("finding all Group instances");
+		log.debug("finding all Book instances");
 		try {
-			String queryString = "from Group";
+			String queryString = "from Book";
 			Query queryObject = getSession().createQuery(queryString);
 			return queryObject.list();
 		} catch (RuntimeException re) {
@@ -101,10 +105,10 @@ public class GroupDAO extends BaseHibernateDAO {
 		}
 	}
 
-	public Group merge(Group detachedInstance) {
-		log.debug("merging Group instance");
+	public Book merge(Book detachedInstance) {
+		log.debug("merging Book instance");
 		try {
-			Group result = (Group) getSession().merge(detachedInstance);
+			Book result = (Book) getSession().merge(detachedInstance);
 			log.debug("merge successful");
 			return result;
 		} catch (RuntimeException re) {
@@ -113,8 +117,8 @@ public class GroupDAO extends BaseHibernateDAO {
 		}
 	}
 
-	public void attachDirty(Group instance) {
-		log.debug("attaching dirty Group instance");
+	public void attachDirty(Book instance) {
+		log.debug("attaching dirty Book instance");
 		try {
 			getSession().saveOrUpdate(instance);
 			log.debug("attach successful");
@@ -124,10 +128,10 @@ public class GroupDAO extends BaseHibernateDAO {
 		}
 	}
 
-	public void attachClean(Group instance) {
-		log.debug("attaching clean Group instance");
+	public void attachClean(Book instance) {
+		log.debug("attaching clean Book instance");
 		try {
-			getSession().buildLockRequest(LockOptions.NONE).lock(instance);
+			getSession().lock(instance, LockMode.NONE);
 			log.debug("attach successful");
 		} catch (RuntimeException re) {
 			log.error("attach failed", re);

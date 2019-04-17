@@ -1,4 +1,4 @@
-package cn.edu.scau.cmi.liangzaoqing.hibernate.dao;
+package cn.edu.scau.cmi.liangzaoqing.hibernate.domain;
 
 import org.hibernate.Session;
 

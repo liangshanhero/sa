@@ -4,11 +4,11 @@ import java.util.HashSet;
 import java.util.Set;
 
 /**
- * AbstractCourse entity provides the base persistence definition of the Course
+ * AbstractBook entity provides the base persistence definition of the Book
  * entity. @author MyEclipse Persistence Tools
  */
 
-public abstract class AbstractCourse implements java.io.Serializable {
+public abstract class AbstractBook implements java.io.Serializable {
 
 	// Fields
 
@@ -19,16 +19,16 @@ public abstract class AbstractCourse implements java.io.Serializable {
 	// Constructors
 
 	/** default constructor */
-	public AbstractCourse() {
+	public AbstractBook() {
 	}
 
 	/** minimal constructor */
-	public AbstractCourse(String name) {
+	public AbstractBook(String name) {
 		this.name = name;
 	}
 
 	/** full constructor */
-	public AbstractCourse(String name, Set book2courses) {
+	public AbstractBook(String name, Set book2courses) {
 		this.name = name;
 		this.book2courses = book2courses;
 	}
