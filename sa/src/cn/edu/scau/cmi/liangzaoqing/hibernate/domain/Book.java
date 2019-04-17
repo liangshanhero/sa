@@ -3,23 +3,23 @@ package cn.edu.scau.cmi.liangzaoqing.hibernate.domain;
 import java.util.Set;
 
 /**
- * Course entity. @author MyEclipse Persistence Tools
+ * Book entity. @author MyEclipse Persistence Tools
  */
-public class Course extends AbstractCourse implements java.io.Serializable {
+public class Book extends AbstractBook implements java.io.Serializable {
 
 	// Constructors
 
 	/** default constructor */
-	public Course() {
+	public Book() {
 	}
 
 	/** minimal constructor */
-	public Course(String name) {
+	public Book(String name) {
 		super(name);
 	}
 
 	/** full constructor */
-	public Course(String name, Set book2courses) {
+	public Book(String name, Set book2courses) {
 		super(name, book2courses);
 	}
 

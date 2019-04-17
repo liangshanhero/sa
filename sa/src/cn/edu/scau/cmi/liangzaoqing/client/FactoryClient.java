@@ -1,8 +1,7 @@
-package cn.edu.scau.cmi.liangzaoqing.client;
+/*package cn.edu.scau.cmi.liangzaoqing.client;
 import org.hibernate.Session;
 import org.hibernate.Transaction;
 
-import cn.edu.scau.cmi.liangzaoqing.hibernate.domain.Sa;
 import cn.edu.scau.cmi.liangzaoqing.hibernate.util.HibernateSessionFactory;
 
 public class FactoryClient {
@@ -30,3 +29,4 @@ public class FactoryClient {
 	}
 
 }
+*/
