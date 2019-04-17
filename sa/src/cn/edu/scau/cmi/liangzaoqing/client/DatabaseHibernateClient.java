@@ -40,6 +40,7 @@ public class DatabaseHibernateClient {
 		book.setName("高级数据库系统");
 		session.save(book);
 		
+		
 		transaction.commit();
 		session.close();
 	}
