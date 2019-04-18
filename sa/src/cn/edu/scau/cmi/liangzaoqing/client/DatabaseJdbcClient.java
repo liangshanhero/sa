@@ -10,6 +10,22 @@ import cn.edu.scau.cmi.liangzaoqing.hibernate.domain.Book;
 
 
 public class DatabaseJdbcClient {
+	public static void main(String[] args) {
+		getConn();
+		
+		Book book=new Book();
+		book.setName("sa");
+		book.setId(102L);
+		
+		
+		insert(book);
+		
+		
+		getAll();
+	}
+	
+	
+	
 	private static Connection getConn() {
 	    String driver = "com.mysql.jdbc.Driver";
 	    String url = "jdbc:mysql://localhost:3306/test";

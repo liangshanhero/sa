@@ -14,7 +14,6 @@ public class Book2courseDAO extends BaseHibernateDAO {
 	private static final Logger log = LoggerFactory
 			.getLogger(Book2courseDAO.class);
 
-	// property constants
 
 	public void save(Book2course transientInstance) {
 		log.debug("saving Book2course instance");
