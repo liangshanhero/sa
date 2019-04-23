@@ -1,4 +1,4 @@
-package cn.edu.scau.cmi.liangzaoqing.client;
+package cn.edu.scau.cmi.liangzaoqing.client.hibernate;
 
 import org.hibernate.SessionFactory;
 import org.hibernate.internal.SessionFactoryImpl;
