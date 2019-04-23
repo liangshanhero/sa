@@ -11,20 +11,13 @@ import cn.edu.scau.cmi.liangzaoqing.hibernate.domain.Book;
 
 public class DatabaseJdbcClient {
 	public static void main(String[] args) {
-		getConn();
-		
 		Book book=new Book();
 		book.setName("sa");
-		book.setId(102L);
+		book.setId(103L);
 		
-		
-		insert(book);
-		
-		
-		getAll();
+		newBook(book);
+		listAllBooks();
 	}
-	
-	
 	
 	private static Connection getConn() {
 	    String driver = "com.mysql.jdbc.Driver";
@@ -43,8 +36,7 @@ public class DatabaseJdbcClient {
 	    return conn;
 	}
 	
-	
-	private static int insert(Book book) {
+	private static int newBook(Book book) {
 	    Connection conn = getConn();
 	    int i = 0;
 	    String sql = "insert into book (id,name) values(?,?)";
@@ -61,7 +53,6 @@ public class DatabaseJdbcClient {
 	    }
 	    return i;
 	}
-	
 	
 	private static int update(Book book) {
 	    Connection conn = getConn();
@@ -80,9 +71,7 @@ public class DatabaseJdbcClient {
 	    return i;
 	}
 	
-	
-	
-	private static Integer getAll() {
+	private static Integer listAllBooks() {
 	    Connection conn = getConn();
 	    String sql = "select * from book";
 	    PreparedStatement pstmt;
@@ -123,5 +112,4 @@ public class DatabaseJdbcClient {
 	    }
 	    return i;
 	}
-
 }
