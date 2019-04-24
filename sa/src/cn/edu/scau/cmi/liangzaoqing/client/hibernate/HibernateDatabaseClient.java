@@ -11,7 +11,7 @@ import cn.edu.scau.cmi.liangzaoqing.hibernate.domain.Book;
 import cn.edu.scau.cmi.liangzaoqing.hibernate.util.HibernateSessionFactory;
 import cn.edu.scau.cmi.liangzaoqing.hibernate.util.ScauCmiHibernateSessionFactory;
 
-public class DatabaseHibernateClient {
+public class HibernateDatabaseClient {
 
 	public static void main(String[] args) {
 
