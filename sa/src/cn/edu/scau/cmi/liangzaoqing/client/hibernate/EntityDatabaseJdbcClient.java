@@ -9,7 +9,7 @@ import java.sql.SQLException;
 import cn.edu.scau.cmi.liangzaoqing.hibernate.domain.Book;
 
 
-public class DatabaseJdbcClient {
+public class EntityDatabaseJdbcClient {
 	public static void main(String[] args) {
 		Book book=new Book();
 		book.setName("sa");
@@ -19,22 +19,6 @@ public class DatabaseJdbcClient {
 		listAllBooks();
 	}
 	
-	private static Connection getConn() {
-	    String driver = "com.mysql.jdbc.Driver";
-	    String url = "jdbc:mysql://localhost:3306/test";
-	    String username = "root";
-	    String password = "root";
-	    Connection conn = null;
-	    try {
-	        Class.forName(driver); //classLoader,加载对应驱动
-	        conn = (Connection) DriverManager.getConnection(url, username, password);
-	    } catch (ClassNotFoundException e) {
-	        e.printStackTrace();
-	    } catch (SQLException e) {
-	        e.printStackTrace();
-	    }
-	    return conn;
-	}
 	
 	private static int newBook(Book book) {
 	    Connection conn = getConn();
@@ -112,4 +96,21 @@ public class DatabaseJdbcClient {
 	    }
 	    return i;
 	}
+	private static Connection getConn() {
+	    String driver = "com.mysql.jdbc.Driver";
+	    String url = "jdbc:mysql://localhost:3306/test";
+	    String username = "root";
+	    String password = "root";
+	    Connection conn = null;
+	    try {
+	        Class.forName(driver); //classLoader,加载对应驱动
+	        conn = (Connection) DriverManager.getConnection(url, username, password);
+	    } catch (ClassNotFoundException e) {
+	        e.printStackTrace();
+	    } catch (SQLException e) {
+	        e.printStackTrace();
+	    }
+	    return conn;
+	}
+
 }
