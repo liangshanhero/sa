@@ -11,9 +11,19 @@ public class SpringClient {
 	}
 
 	public static void main(String[] args) {
-		ApplicationContext ac=new ClassPathXmlApplicationContext("applicationContext.xml");
-		Student student=(Student) ac.getBean("zhangsan");
-		System.out.println(student.getTutor().getName());
+		ApplicationContext ac1=new ClassPathXmlApplicationContext("applicationContext.xml");
+		ApplicationContext ac2=new ClassPathXmlApplicationContext("applicationContext.xml");
+		Student student1=(Student) ac1.getBean("zhangsan");
+		Student student2=(Student) ac2.getBean("zhangsan");
+		System.out.println(student1.getTutor().getName());
+		System.out.println(ac1);
+		System.out.println(ac2);
+		System.out.println(student1);
+		System.out.println(student2);
+		
+		
+		
+		
 
 	}
 

@@ -16,10 +16,27 @@ import org.hibernate.boot.registry.StandardServiceRegistryBuilder;
  * 
  */
 public class ScauCmiHibernateSessionFactory {
+	
+	private static SessionFactory sessionFactory;
+//	sessionFactory单例
+	public static SessionFactory getSessionFactory() {
+		if(sessionFactory==null) {
+			sessionFactory=new Configuration().configure().buildSessionFactory();
+		}
+		return sessionFactory;
+	}
+	
+	
+	
 
 	public static Session getSession(){
-		 SessionFactory sf = new Configuration().configure().buildSessionFactory();
-		 Session session=sf.openSession();
+		 Session session=getSessionFactory().openSession();
 		return session;
 	}
+	
+	
+	
+	
+	
+	
 }
