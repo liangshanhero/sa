@@ -1,4 +1,4 @@
-package cn.edu.scau.cmi.liangzaoqing.hibernate.util;
+package cn.edu.scau.cmi.liangzaoqing.dao.customize;
 
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
@@ -11,7 +11,7 @@ import org.hibernate.cfg.Configuration;
  * 
  * 
  */
-public class ScauCmiHibernateSessionFactory {
+public class ScauCmiHibernateSessionFactoryUtil {
 	
 	private static SessionFactory sessionFactory;
 //	sessionFactory单例

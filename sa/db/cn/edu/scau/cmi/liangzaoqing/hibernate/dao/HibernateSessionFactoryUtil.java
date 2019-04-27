@@ -1,4 +1,4 @@
-package cn.edu.scau.cmi.liangzaoqing.hibernate.util;
+package cn.edu.scau.cmi.liangzaoqing.hibernate.dao;
 
 import org.hibernate.HibernateException;
 import org.hibernate.Session;
@@ -12,7 +12,7 @@ import org.hibernate.boot.registry.StandardServiceRegistryBuilder;
  * current thread of execution.  Follows the Thread Local Session
  * pattern, see {@link http://hibernate.org/42.html }.
  */
-public class HibernateSessionFactory {
+public class HibernateSessionFactoryUtil {
 
     /** 
      * Location of hibernate.cfg.xml file.
@@ -43,7 +43,7 @@ public class HibernateSessionFactory {
 			e.printStackTrace();
 		}
     }
-    private HibernateSessionFactory() {
+    private HibernateSessionFactoryUtil() {
     }
 	
 	/**
