@@ -21,18 +21,9 @@ public class ScauCmiHibernateSessionFactoryUtil {
 		}
 		return sessionFactory;
 	}
-	
-	
-	
 
 	public static Session getSession(){
 		 Session session=getSessionFactory().openSession();
 		return session;
 	}
-	
-	
-	
-	
-	
-	
 }

@@ -6,7 +6,7 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 
-import cn.edu.scau.cmi.liangzaoqing.dao.customize.BookDAO;
+import cn.edu.scau.cmi.liangzaoqing.dao.customize.BookDAOByJdbc;
 import cn.edu.scau.cmi.liangzaoqing.hibernate.domain.Book;
 
 
@@ -16,7 +16,7 @@ public class EntityDatabaseDAOClient {
 		book.setName("sa4softwareEngineering");
 		book.setId(301L);
 		
-		BookDAO bookDAO=new BookDAO();
+		BookDAOByJdbc bookDAO=new BookDAOByJdbc();
 		bookDAO.newBook(book);
 		
 		
