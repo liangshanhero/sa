@@ -12,7 +12,7 @@ import cn.edu.scau.cmi.liangzaoqing.hibernate.domain.Book;
 public class BookDAO {
 	
 	public  int newBook(Book book) {
-	    Connection conn = getConn();
+	    Connection conn = DBUtil.getConn();
 	    int i = 0;
 	    String sql = "insert into book (id,name) values(?,?)";
 	    PreparedStatement pstmt;
@@ -30,7 +30,7 @@ public class BookDAO {
 	}
 	
 	public  int  update(Book book) {
-	    Connection conn = getConn();
+	    Connection conn = DBUtil.getConn();
 	    int i = 0;
 	    String sql = "update book set id='" + book.getId() + "' where Name='" + book.getName() + "'";
 	    PreparedStatement pstmt;
@@ -47,7 +47,7 @@ public class BookDAO {
 	}
 	
 	public  Integer listAllBooks() {
-	    Connection conn = getConn();
+	    Connection conn = DBUtil.getConn();
 	    String sql = "select * from book";
 	    PreparedStatement pstmt;
 	    try {
@@ -71,8 +71,8 @@ public class BookDAO {
 	    return null;
 	}
 	
-	public  int delete(String name) {
-	    Connection conn = getConn();
+	public  int delete(Book name) {
+	    Connection conn = DBUtil.getConn();
 	    int i = 0;
 	    String sql = "delete from book where Name='" + name + "'";
 	    PreparedStatement pstmt;
@@ -87,21 +87,6 @@ public class BookDAO {
 	    }
 	    return i;
 	}
-	public  Connection getConn() {
-	    String driver = "com.mysql.jdbc.Driver";
-	    String url = "jdbc:mysql://localhost:3306/test";
-	    String username = "root";
-	    String password = "root";
-	    Connection conn = null;
-	    try {
-	        Class.forName(driver); //classLoader,加载对应驱动
-	        conn = (Connection) DriverManager.getConnection(url, username, password);
-	    } catch (ClassNotFoundException e) {
-	        e.printStackTrace();
-	    } catch (SQLException e) {
-	        e.printStackTrace();
-	    }
-	    return conn;
-	}
+	
 
 }

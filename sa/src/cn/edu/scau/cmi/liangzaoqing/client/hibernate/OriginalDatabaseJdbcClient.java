@@ -11,7 +11,7 @@ import cn.edu.scau.cmi.liangzaoqing.hibernate.domain.Book;
 
 public class OriginalDatabaseJdbcClient {
 	public static void main(String[] args) {
-		newBook(200L, "软件体系结构教材");
+		newBook(300L, "软件体系结构教材");
 		listAllBooks();
 	}
 	

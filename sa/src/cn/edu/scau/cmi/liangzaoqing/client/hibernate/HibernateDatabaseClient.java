@@ -38,6 +38,8 @@ public class HibernateDatabaseClient {
 		Transaction transaction = session.beginTransaction();
 		Book book=new Book();
 		book.setName("高级数据库系统");
+		
+		
 		session.save(book);
 		
 		
