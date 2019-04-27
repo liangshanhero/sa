@@ -1,4 +1,4 @@
-package cn.edu.scau.cmi.liangzaoqing.client.hibernate;
+package cn.edu.scau.cmi.liangzaoqing.client;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
@@ -9,10 +9,19 @@ import java.sql.SQLException;
 import cn.edu.scau.cmi.liangzaoqing.hibernate.domain.Book;
 
 
-public class BookDAO {
+public class EntityDatabaseJdbcClient {
+	public static void main(String[] args) {
+		Book book=new Book();
+		book.setName("sa");
+		book.setId(103L);
+		
+		newBook(book);
+		listAllBooks();
+	}
 	
-	public  int newBook(Book book) {
-	    Connection conn = DBUtil.getConn();
+	
+	private static int newBook(Book book) {
+	    Connection conn = getConn();
 	    int i = 0;
 	    String sql = "insert into book (id,name) values(?,?)";
 	    PreparedStatement pstmt;
@@ -29,8 +38,8 @@ public class BookDAO {
 	    return i;
 	}
 	
-	public  int  update(Book book) {
-	    Connection conn = DBUtil.getConn();
+	private static int update(Book book) {
+	    Connection conn = getConn();
 	    int i = 0;
 	    String sql = "update book set id='" + book.getId() + "' where Name='" + book.getName() + "'";
 	    PreparedStatement pstmt;
@@ -46,8 +55,8 @@ public class BookDAO {
 	    return i;
 	}
 	
-	public  Integer listAllBooks() {
-	    Connection conn = DBUtil.getConn();
+	private static Integer listAllBooks() {
+	    Connection conn = getConn();
 	    String sql = "select * from book";
 	    PreparedStatement pstmt;
 	    try {
@@ -71,8 +80,8 @@ public class BookDAO {
 	    return null;
 	}
 	
-	public  int delete(Book name) {
-	    Connection conn = DBUtil.getConn();
+	private static int delete(String name) {
+	    Connection conn = getConn();
 	    int i = 0;
 	    String sql = "delete from book where Name='" + name + "'";
 	    PreparedStatement pstmt;
@@ -87,6 +96,21 @@ public class BookDAO {
 	    }
 	    return i;
 	}
-	
+	private static Connection getConn() {
+	    String driver = "com.mysql.jdbc.Driver";
+	    String url = "jdbc:mysql://localhost:3306/test";
+	    String username = "root";
+	    String password = "root";
+	    Connection conn = null;
+	    try {
+	        Class.forName(driver); //classLoader,加载对应驱动
+	        conn = (Connection) DriverManager.getConnection(url, username, password);
+	    } catch (ClassNotFoundException e) {
+	        e.printStackTrace();
+	    } catch (SQLException e) {
+	        e.printStackTrace();
+	    }
+	    return conn;
+	}
 
 }

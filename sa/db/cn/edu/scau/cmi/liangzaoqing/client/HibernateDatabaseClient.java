@@ -1,4 +1,4 @@
-package cn.edu.scau.cmi.liangzaoqing.client.hibernate;
+package cn.edu.scau.cmi.liangzaoqing.client;
 
 import java.util.Iterator;
 import java.util.List;

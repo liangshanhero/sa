@@ -1,4 +1,4 @@
-package cn.edu.scau.cmi.liangzaoqing.client.hibernate;
+package cn.edu.scau.cmi.liangzaoqing.client;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
@@ -6,6 +6,7 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 
+import cn.edu.scau.cmi.liangzaoqing.dao.customize.BookDAO;
 import cn.edu.scau.cmi.liangzaoqing.hibernate.domain.Book;
 
 

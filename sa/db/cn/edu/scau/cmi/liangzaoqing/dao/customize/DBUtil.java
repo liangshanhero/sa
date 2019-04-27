@@ -1,4 +1,4 @@
-package cn.edu.scau.cmi.liangzaoqing.client.hibernate;
+package cn.edu.scau.cmi.liangzaoqing.dao.customize;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
