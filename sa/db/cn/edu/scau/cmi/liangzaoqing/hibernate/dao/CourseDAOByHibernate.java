@@ -8,16 +8,15 @@ import org.hibernate.criterion.Example;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import cn.edu.scau.cmi.liangzaoqing.hibernate.domain.Book;
+import cn.edu.scau.cmi.liangzaoqing.hibernate.domain.Course;
 
-
-public class BookDAO extends BaseHibernateDAO {
-	private static final Logger log = LoggerFactory.getLogger(BookDAO.class);
+public class CourseDAOByHibernate extends BaseHibernateDAO {
+	private static final Logger log = LoggerFactory.getLogger(CourseDAOByHibernate.class);
 	// property constants
 	public static final String NAME = "name";
 
-	public void save(Book transientInstance) {
-		log.debug("saving Book instance");
+	public void save(Course transientInstance) {
+		log.debug("saving Course instance");
 		try {
 			getSession().save(transientInstance);
 			log.debug("save successful");
@@ -27,8 +26,8 @@ public class BookDAO extends BaseHibernateDAO {
 		}
 	}
 
-	public void delete(Book persistentInstance) {
-		log.debug("deleting Book instance");
+	public void delete(Course persistentInstance) {
+		log.debug("deleting Course instance");
 		try {
 			getSession().delete(persistentInstance);
 			log.debug("delete successful");
@@ -38,11 +37,11 @@ public class BookDAO extends BaseHibernateDAO {
 		}
 	}
 
-	public Book findById(java.lang.Long id) {
-		log.debug("getting Book instance with id: " + id);
+	public Course findById(java.lang.Long id) {
+		log.debug("getting Course instance with id: " + id);
 		try {
-			Book instance = (Book) getSession().get(
-					"cn.edu.scau.cmi.liangzaoqing.hibernate.domain.Book", id);
+			Course instance = (Course) getSession().get(
+					"cn.edu.scau.cmi.liangzaoqing.hibernate.domain.Course", id);
 			return instance;
 		} catch (RuntimeException re) {
 			log.error("get failed", re);
@@ -50,11 +49,11 @@ public class BookDAO extends BaseHibernateDAO {
 		}
 	}
 
-	public List findByExample(Book instance) {
-		log.debug("finding Book instance by example");
+	public List findByExample(Course instance) {
+		log.debug("finding Course instance by example");
 		try {
 			List results = getSession()
-					.createCriteria("cn.edu.scau.cmi.liangzaoqing.hibernate.domain.Book")
+					.createCriteria("cn.edu.scau.cmi.liangzaoqing.hibernate.domain.Course")
 					.add(Example.create(instance)).list();
 			log.debug("find by example successful, result size: "
 					+ results.size());
@@ -66,10 +65,10 @@ public class BookDAO extends BaseHibernateDAO {
 	}
 
 	public List findByProperty(String propertyName, Object value) {
-		log.debug("finding Book instance with property: " + propertyName
+		log.debug("finding Course instance with property: " + propertyName
 				+ ", value: " + value);
 		try {
-			String queryString = "from Book as model where model."
+			String queryString = "from Course as model where model."
 					+ propertyName + "= ?";
 			Query queryObject = getSession().createQuery(queryString);
 			queryObject.setParameter(0, value);
@@ -85,9 +84,9 @@ public class BookDAO extends BaseHibernateDAO {
 	}
 
 	public List findAll() {
-		log.debug("finding all Book instances");
+		log.debug("finding all Course instances");
 		try {
-			String queryString = "from Book";
+			String queryString = "from Course";
 			Query queryObject = getSession().createQuery(queryString);
 			return queryObject.list();
 		} catch (RuntimeException re) {
@@ -96,10 +95,10 @@ public class BookDAO extends BaseHibernateDAO {
 		}
 	}
 
-	public Book merge(Book detachedInstance) {
-		log.debug("merging Book instance");
+	public Course merge(Course detachedInstance) {
+		log.debug("merging Course instance");
 		try {
-			Book result = (Book) getSession().merge(detachedInstance);
+			Course result = (Course) getSession().merge(detachedInstance);
 			log.debug("merge successful");
 			return result;
 		} catch (RuntimeException re) {
@@ -108,8 +107,8 @@ public class BookDAO extends BaseHibernateDAO {
 		}
 	}
 
-	public void attachDirty(Book instance) {
-		log.debug("attaching dirty Book instance");
+	public void attachDirty(Course instance) {
+		log.debug("attaching dirty Course instance");
 		try {
 			getSession().saveOrUpdate(instance);
 			log.debug("attach successful");
@@ -119,8 +118,8 @@ public class BookDAO extends BaseHibernateDAO {
 		}
 	}
 
-	public void attachClean(Book instance) {
-		log.debug("attaching clean Book instance");
+	public void attachClean(Course instance) {
+		log.debug("attaching clean Course instance");
 		try {
 			getSession().lock(instance, LockMode.NONE);
 			log.debug("attach successful");

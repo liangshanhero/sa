@@ -7,7 +7,7 @@ import org.hibernate.Session;
 import org.hibernate.Transaction;
 
 import cn.edu.scau.cmi.liangzaoqing.dao.customize.ScauCmiHibernateSessionFactoryUtil;
-import cn.edu.scau.cmi.liangzaoqing.hibernate.dao.BookDAO;
+import cn.edu.scau.cmi.liangzaoqing.hibernate.dao.BookDAOByHibernate;
 import cn.edu.scau.cmi.liangzaoqing.hibernate.dao.HibernateSessionFactoryUtil;
 import cn.edu.scau.cmi.liangzaoqing.hibernate.domain.Book;
 
@@ -21,7 +21,7 @@ public class HibernateDatabaseClient {
 	}
 
 	private static void listBooks() {
-		BookDAO bookDAO=new BookDAO();
+		BookDAOByHibernate bookDAO=new BookDAOByHibernate();
 		List books = bookDAO.findAll();
 		Iterator<?> bookIterator = books.iterator();
 		while(bookIterator.hasNext()){

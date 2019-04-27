@@ -16,28 +16,25 @@ public class OriginalDatabaseJdbcClient {
 	}
 	
 	
-	private static int newBook(long id, String bookName) {
+	private static void newBook(long id, String bookName) {
 	    Connection conn = getConn();
-	    int i = 0;
 	    String sql = "insert into book (id,name) values(?,?)";
 	    PreparedStatement pstmt;
 	    try {
 	        pstmt = (PreparedStatement) conn.prepareStatement(sql);
 	        pstmt.setLong(1, id);
 	        pstmt.setString(2, bookName);
-	        
-	        i = pstmt.executeUpdate();
+	        pstmt.executeUpdate();
 	        pstmt.close();
 	        conn.close();
 	    } catch (SQLException e) {
 	        e.printStackTrace();
 	    }
-	    return i;
 	}
 	
 	
 	
-	private static Integer listAllBooks() {
+	private static void listAllBooks() {
 	    Connection conn = getConn();
 	    String sql = "select * from book";
 	    PreparedStatement pstmt;
@@ -57,7 +54,6 @@ public class OriginalDatabaseJdbcClient {
 	    } catch (SQLException e) {
 	        e.printStackTrace();
 	    }
-	    return null;
 	}
 	
 	

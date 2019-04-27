@@ -10,9 +10,9 @@ import org.slf4j.LoggerFactory;
 import cn.edu.scau.cmi.liangzaoqing.hibernate.domain.Book2course;
 
 
-public class Book2courseDAO extends BaseHibernateDAO {
+public class Book2courseDAOByHibernate extends BaseHibernateDAO {
 	private static final Logger log = LoggerFactory
-			.getLogger(Book2courseDAO.class);
+			.getLogger(Book2courseDAOByHibernate.class);
 
 
 	public void save(Book2course transientInstance) {

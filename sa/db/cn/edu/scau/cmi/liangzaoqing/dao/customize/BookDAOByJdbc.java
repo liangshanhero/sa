@@ -8,7 +8,7 @@ import java.sql.SQLException;
 
 import cn.edu.scau.cmi.liangzaoqing.hibernate.domain.Book;
 
-public class BookDAO {
+public class BookDAOByJdbc {
 
 	public void newBook(Book book) {
 		Connection conn = DBUtil.getConn();
