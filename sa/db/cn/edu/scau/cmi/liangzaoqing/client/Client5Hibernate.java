@@ -4,14 +4,16 @@ import java.util.Iterator;
 import java.util.List;
 
 import org.hibernate.Session;
+import org.hibernate.SessionFactory;
 import org.hibernate.Transaction;
+import org.hibernate.cfg.Configuration;
 
 import cn.edu.scau.cmi.liangzaoqing.dao.customize.ScauCmiHibernateSessionFactoryUtil;
 import cn.edu.scau.cmi.liangzaoqing.hibernate.dao.BookDAOByHibernate;
 import cn.edu.scau.cmi.liangzaoqing.hibernate.dao.HibernateSessionFactoryUtil;
 import cn.edu.scau.cmi.liangzaoqing.hibernate.domain.Book;
 
-public class Client4Hibernate {
+public class Client5Hibernate {
 
 	public static void main(String[] args) {
 		newBook();
@@ -19,7 +21,11 @@ public class Client4Hibernate {
 	}
 
 		public static void newBook() {
-			Session session = ScauCmiHibernateSessionFactoryUtil.getSession();
+//			(1) 可以复用，因此可以抽取出来；
+//			(2) SessionFactory应该单例化；
+			SessionFactory sf = new Configuration().configure().buildSessionFactory();
+			Session session = sf.openSession();
+			
 			Transaction transaction = session.beginTransaction();
 			Book book=new Book();
 			book.setName("高级数据库系统");
