@@ -11,7 +11,7 @@ import cn.edu.scau.cmi.liangzaoqing.hibernate.dao.BookDAOByHibernate;
 import cn.edu.scau.cmi.liangzaoqing.hibernate.dao.HibernateSessionFactoryUtil;
 import cn.edu.scau.cmi.liangzaoqing.hibernate.domain.Book;
 
-public class Client4HibernateByUtil {
+public class Client5HibernateByUtil {
 
 	public static void main(String[] args) {
 		newBook();

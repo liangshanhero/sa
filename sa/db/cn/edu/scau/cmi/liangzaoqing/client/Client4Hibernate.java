@@ -13,7 +13,7 @@ import cn.edu.scau.cmi.liangzaoqing.hibernate.dao.BookDAOByHibernate;
 import cn.edu.scau.cmi.liangzaoqing.hibernate.dao.HibernateSessionFactoryUtil;
 import cn.edu.scau.cmi.liangzaoqing.hibernate.domain.Book;
 
-public class Client5Hibernate {
+public class Client4Hibernate {
 
 	public static void main(String[] args) {
 		newBook();
