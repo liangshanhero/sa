@@ -21,6 +21,8 @@
 		<mapping resource="cn/edu/scau/cmi/liangzaoqing/hibernate/domain/Book.hbm.xml" />
 		<mapping resource="cn/edu/scau/cmi/liangzaoqing/hibernate/domain/Course.hbm.xml" />
 		<mapping resource="cn/edu/scau/cmi/liangzaoqing/hibernate/domain/Book2course.hbm.xml" />
+		<mapping resource="cn/edu/scau/cmi/liangzaoqing/hibernate/domain/Student.hbm.xml" />
+		<mapping resource="cn/edu/scau/cmi/liangzaoqing/hibernate/domain/Teacher.hbm.xml" />
 
 	</session-factory>
 
