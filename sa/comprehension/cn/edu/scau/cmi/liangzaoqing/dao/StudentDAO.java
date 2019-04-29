@@ -15,6 +15,8 @@ public class StudentDAO extends BaseHibernateDAO {
 	private static final Logger log = LoggerFactory.getLogger(StudentDAO.class);
 	// property constants
 	public static final String NAME = "name";
+	
+	
 
 	public void save(Student transientInstance) {
 		log.debug("saving Student instance");
