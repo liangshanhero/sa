@@ -7,7 +7,7 @@
 	</configSuffixes>
 	<enableImports><![CDATA[false]]></enableImports>
 	<configs>
-		<config>spring/applicationContext.xml</config>
+		<config>spring/springApplicationContext.xml</config>
 	</configs>
 	<autoconfigs>
 	</autoconfigs>
