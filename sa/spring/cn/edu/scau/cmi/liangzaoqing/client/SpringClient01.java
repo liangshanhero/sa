@@ -16,11 +16,11 @@ public class SpringClient01 {
 	}
 
 	public static void main(String[] args) {
-		prepareBeforeClass();
+		prepareBeforeDebate();// graduate debate.
 		System.out.println(zhangsan.getName()+"的毕业设计指导导师是："+zhangsan.getTutor().getName());
 	}
 
-	private static void prepareBeforeClass() {
+	private static void prepareBeforeDebate() {
 		liangzaoqing=new Teacher();
 		liangzaoqing.setName("梁早清");
 		liangzaoqing.setGendar("男");
