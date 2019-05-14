@@ -24,6 +24,6 @@
 	
 	<!-- 访问数据库的各种dao -->
 	
-	<bean id="studentDAO" class="cn.edu.scau.cmi.liangzaoqing.dao.StudentDAO"></bean>
-	<bean id="teacherDAO" class="cn.edu.scau.cmi.liangzaoqing.dao.TeacherDAO"></bean>
+	<bean id="studentDAO" class="cn.edu.scau.cmi.liangzaoqing.comprehension.dao.StudentDAO"></bean>
+	<bean id="teacherDAO" class="cn.edu.scau.cmi.liangzaoqing.comprehension.dao.TeacherDAO"></bean>
 </beans>

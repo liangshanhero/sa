@@ -1,4 +1,4 @@
-package cn.edu.scau.cmi.liangzaoqing.client;
+package cn.edu.scau.cmi.liangzaoqing.comprehension.client;
 
 import java.util.Iterator;
 import java.util.List;
@@ -6,10 +6,10 @@ import java.util.List;
 import org.hibernate.Session;
 import org.hibernate.Transaction;
 
-import cn.edu.scau.cmi.liangzaoqing.dao.StudentDAO;
-import cn.edu.scau.cmi.liangzaoqing.dao.TeacherDAO;
+import cn.edu.scau.cmi.liangzaoqing.comprehension.dao.StudentDAO;
+import cn.edu.scau.cmi.liangzaoqing.comprehension.dao.TeacherDAO;
+import cn.edu.scau.cmi.liangzaoqing.comprehension.domain.Student;
 import cn.edu.scau.cmi.liangzaoqing.dao.customize.ScauCmiHibernateSessionFactoryUtil;
-import cn.edu.scau.cmi.liangzaoqing.domain.Student;
 import cn.edu.scau.cmi.liangzaoqing.hibernate.dao.BookDAOByHibernate;
 import cn.edu.scau.cmi.liangzaoqing.hibernate.dao.HibernateSessionFactoryUtil;
 import cn.edu.scau.cmi.liangzaoqing.hibernate.domain.Book;

@@ -3,12 +3,12 @@
 "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
 
 <hibernate-mapping>
-    <class name="cn.edu.scau.cmi.liangzaoqing.domain.Student" table="student" catalog="sa">
+    <class name="cn.edu.scau.cmi.liangzaoqing.comprehension.domain.Student" table="student" catalog="sa">
         <id name="id" type="java.lang.Long">
             <column name="id" />
             <generator class="identity" />
         </id>
-        <many-to-one name="teacher" class="cn.edu.scau.cmi.liangzaoqing.domain.Teacher" fetch="select">
+        <many-to-one name="teacher" class="cn.edu.scau.cmi.liangzaoqing.comprehension.domain.Teacher" fetch="select">
             <column name="tutor" />
         </many-to-one>
         <property name="name" type="java.lang.String">

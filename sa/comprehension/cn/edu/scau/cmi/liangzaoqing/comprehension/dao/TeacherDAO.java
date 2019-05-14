@@ -1,4 +1,4 @@
-package cn.edu.scau.cmi.liangzaoqing.dao;
+package cn.edu.scau.cmi.liangzaoqing.comprehension.dao;
 
 import java.util.List;
 import java.util.Set;
@@ -8,7 +8,7 @@ import org.hibernate.criterion.Example;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import cn.edu.scau.cmi.liangzaoqing.domain.Teacher;
+import cn.edu.scau.cmi.liangzaoqing.comprehension.domain.Teacher;
 import cn.edu.scau.cmi.liangzaoqing.hibernate.dao.BaseHibernateDAO;
 
 

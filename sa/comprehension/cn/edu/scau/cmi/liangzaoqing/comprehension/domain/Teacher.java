@@ -1,4 +1,4 @@
-package cn.edu.scau.cmi.liangzaoqing.domain;
+package cn.edu.scau.cmi.liangzaoqing.comprehension.domain;
 
 import java.util.HashSet;
 import java.util.Set;
