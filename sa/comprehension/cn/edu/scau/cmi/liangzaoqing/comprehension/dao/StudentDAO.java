@@ -10,7 +10,6 @@ import org.slf4j.LoggerFactory;
 
 import cn.edu.scau.cmi.liangzaoqing.comprehension.domain.Student;
 import cn.edu.scau.cmi.liangzaoqing.comprehension.util.ScauCmiHibernateSessionFactoryUtil;
-import cn.edu.scau.cmi.liangzaoqing.hibernate.dao.BaseHibernateDAO;
 
 
 public class StudentDAO {

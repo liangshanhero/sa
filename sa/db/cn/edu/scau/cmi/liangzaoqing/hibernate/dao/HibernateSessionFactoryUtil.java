@@ -2,10 +2,10 @@ package cn.edu.scau.cmi.liangzaoqing.hibernate.dao;
 
 import org.hibernate.HibernateException;
 import org.hibernate.Session;
-import org.hibernate.cfg.Configuration;
-import org.hibernate.service.ServiceRegistry;
-import org.hibernate.boot.MetadataSources;
 import org.hibernate.boot.registry.StandardServiceRegistryBuilder;
+import org.hibernate.cfg.Configuration;
+import org.hibernate.metamodel.MetadataSources;
+import org.hibernate.service.ServiceRegistry;
 
 /**
  * Configures and provides access to Hibernate sessions, tied to the

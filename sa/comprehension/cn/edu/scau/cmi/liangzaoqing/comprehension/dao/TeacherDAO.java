@@ -1,7 +1,6 @@
 package cn.edu.scau.cmi.liangzaoqing.comprehension.dao;
 
 import java.util.List;
-import java.util.Set;
 import org.hibernate.LockOptions;
 import org.hibernate.Query;
 import org.hibernate.Session;
@@ -11,7 +10,6 @@ import org.slf4j.LoggerFactory;
 
 import cn.edu.scau.cmi.liangzaoqing.comprehension.domain.Teacher;
 import cn.edu.scau.cmi.liangzaoqing.comprehension.util.ScauCmiHibernateSessionFactoryUtil;
-import cn.edu.scau.cmi.liangzaoqing.hibernate.dao.BaseHibernateDAO;
 
 
 

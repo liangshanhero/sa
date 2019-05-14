@@ -19,6 +19,7 @@ public class ComprehensionConsoleClient {
 		Teacher zhukai=new Teacher();
 		zhukai.setId(200L);
 		zhukai.setName("朱凯");
+		System.out.println(zhukai.getName());
 		teacherDAO.save(zhukai);
 		
 //		
