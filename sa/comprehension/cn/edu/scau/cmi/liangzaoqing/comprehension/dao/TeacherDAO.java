@@ -4,16 +4,18 @@ import java.util.List;
 import java.util.Set;
 import org.hibernate.LockOptions;
 import org.hibernate.Query;
+import org.hibernate.Session;
 import org.hibernate.criterion.Example;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import cn.edu.scau.cmi.liangzaoqing.comprehension.domain.Teacher;
+import cn.edu.scau.cmi.liangzaoqing.comprehension.util.ScauCmiHibernateSessionFactoryUtil;
 import cn.edu.scau.cmi.liangzaoqing.hibernate.dao.BaseHibernateDAO;
 
 
 
-public class TeacherDAO extends BaseHibernateDAO {
+public class TeacherDAO{
 	private static final Logger log = LoggerFactory.getLogger(TeacherDAO.class);
 	// property constants
 	public static final String NAME = "name";
@@ -27,6 +29,11 @@ public class TeacherDAO extends BaseHibernateDAO {
 			log.error("save failed", re);
 			throw re;
 		}
+	}
+
+	private Session getSession() {
+		// TODO Auto-generated method stub
+		return ScauCmiHibernateSessionFactoryUtil.getSession();
 	}
 
 	public void delete(Teacher persistentInstance) {

@@ -3,15 +3,17 @@ package cn.edu.scau.cmi.liangzaoqing.comprehension.dao;
 import java.util.List;
 import org.hibernate.LockOptions;
 import org.hibernate.Query;
+import org.hibernate.Session;
 import org.hibernate.criterion.Example;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import cn.edu.scau.cmi.liangzaoqing.comprehension.domain.Student;
+import cn.edu.scau.cmi.liangzaoqing.comprehension.util.ScauCmiHibernateSessionFactoryUtil;
 import cn.edu.scau.cmi.liangzaoqing.hibernate.dao.BaseHibernateDAO;
 
 
-public class StudentDAO extends BaseHibernateDAO {
+public class StudentDAO {
 	private static final Logger log = LoggerFactory.getLogger(StudentDAO.class);
 	// property constants
 	public static final String NAME = "name";
@@ -27,6 +29,11 @@ public class StudentDAO extends BaseHibernateDAO {
 			log.error("save failed", re);
 			throw re;
 		}
+	}
+
+	private Session getSession() {
+		// TODO Auto-generated method stub
+		return ScauCmiHibernateSessionFactoryUtil.getSession();
 	}
 
 	public void delete(Student persistentInstance) {
