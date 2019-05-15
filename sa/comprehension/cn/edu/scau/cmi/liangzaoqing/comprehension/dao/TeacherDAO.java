@@ -4,6 +4,7 @@ import java.util.List;
 import org.hibernate.LockOptions;
 import org.hibernate.Query;
 import org.hibernate.Session;
+import org.hibernate.Transaction;
 import org.hibernate.criterion.Example;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -17,11 +18,17 @@ public class TeacherDAO{
 	private static final Logger log = LoggerFactory.getLogger(TeacherDAO.class);
 	// property constants
 	public static final String NAME = "name";
+	private Session session;
 
 	public void save(Teacher transientInstance) {
 		log.debug("saving Teacher instance");
 		try {
-			getSession().save(transientInstance);
+			getSession();
+			Transaction transaction = session.beginTransaction();
+			session.save(transientInstance);
+			transaction.commit();
+			
+			
 			log.debug("save successful");
 		} catch (RuntimeException re) {
 			log.error("save failed", re);
@@ -30,8 +37,8 @@ public class TeacherDAO{
 	}
 
 	private Session getSession() {
-		// TODO Auto-generated method stub
-		return ScauCmiHibernateSessionFactoryUtil.getSession();
+		session=ScauCmiHibernateSessionFactoryUtil.getSession();
+		return session;
 	}
 
 	public void delete(Teacher persistentInstance) {

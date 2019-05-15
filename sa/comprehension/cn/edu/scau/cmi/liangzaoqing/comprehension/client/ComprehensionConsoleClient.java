@@ -13,22 +13,20 @@ public class ComprehensionConsoleClient {
 	public static void main(String[] args) {
 //		（1） 初始化applicationContext，并获取studentDAO对象
 		ApplicationContext applicationContext = ComprehensionApplicationContextUtil.getApplicationContext();
-//		StudentDAO studentDAO=(StudentDAO) applicationContext.getBean("studentDAO");
+		StudentDAO studentDAO=(StudentDAO) applicationContext.getBean("studentDAO");
 		TeacherDAO teacherDAO=(TeacherDAO) applicationContext.getBean("teacherDAO");
 //		（2）创建教师和学生对象，并设置他们之间的关系
 		Teacher zhukai=new Teacher();
-		zhukai.setId(200L);
-		zhukai.setName("朱凯");
-		System.out.println(zhukai.getName());
+		zhukai.setName("导师");
+		
 		teacherDAO.save(zhukai);
 		
 //		
-//		Student wangwu=new Student();
-//		wangwu.setId(200L);
-//		wangwu.setName("王五");
-//		
-//		wangwu.setTeacher(zhukai);
-////		（3）保存数据
-//		studentDAO.save(wangwu);
+		Student wangwu=new Student();
+		wangwu.setName("学生");
+		
+		wangwu.setTeacher(zhukai);
+//		（3）保存数据
+		studentDAO.save(wangwu);
 	}
 }
