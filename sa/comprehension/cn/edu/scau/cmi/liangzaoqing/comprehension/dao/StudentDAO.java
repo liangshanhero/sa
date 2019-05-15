@@ -4,6 +4,7 @@ import java.util.List;
 import org.hibernate.LockOptions;
 import org.hibernate.Query;
 import org.hibernate.Session;
+import org.hibernate.Transaction;
 import org.hibernate.criterion.Example;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -16,23 +17,26 @@ public class StudentDAO {
 	private static final Logger log = LoggerFactory.getLogger(StudentDAO.class);
 	// property constants
 	public static final String NAME = "name";
+//	dao依赖hibernate session对象。使用spring封装该属性。
+	private Session session;
 	
 	
 
 	public void save(Student transientInstance) {
-		log.debug("saving Student instance");
 		try {
-			getSession().save(transientInstance);
-			log.debug("save successful");
+//			如果
+			getSession();
+			Transaction transaction = session.beginTransaction();
+			session.save(transientInstance);
+			transaction.commit();
 		} catch (RuntimeException re) {
-			log.error("save failed", re);
 			throw re;
 		}
 	}
 
 	private Session getSession() {
-		// TODO Auto-generated method stub
-		return ScauCmiHibernateSessionFactoryUtil.getSession();
+		session=ScauCmiHibernateSessionFactoryUtil.getSession();
+		return session;
 	}
 
 	public void delete(Student persistentInstance) {
